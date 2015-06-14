@@ -1,0 +1,63 @@
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Current Jobs</a></li>
+		<li><a href="#tabs-2">Entity Selection</a></li>
+		<li><a href="#tabs-3">Data Source</a></li>
+		<li><a href="#tabs-4">Reference Links</a></li>
+		<li><a href="#tabs-5">Review</a></li>
+	</ul>
+	<div id="tabs-1">
+		Which job do you want to modify?
+		<div id="currentJobs"></div>
+		<!--
+		<div>
+			How do you wish to select entities?<br/>
+			<input type="checkbox">By providing a List of entities</input><br/>
+			<input type="checkbox">By selecting categories of entities</input><br/>
+			<input type="checkbox">By formulating an ASK query</input><br/>
+			<input type="checkbox">By using the AnalysisInterface</input><br/>
+			<input type="button" value="Next">
+		</div>
+		-->
+	</div>
+	<div id="tabs-2">
+		<div class="block">Which entity list do you want to use?
+			<div id="entitySelections"></div>
+		</div>
+		<div class="block">
+			<div id="entityList" style="border-style:solid"></div>
+			<div>Add entity:<input type="text" id="inputEntityList"/></div>
+		</div>
+		<div class="block" style="opacity: 0.3">
+			<div>Add category:<input type="text"/></div>
+		</div>
+		<div class="block" style="opacity: 0.3">
+			<div>ASK query:<input type="text"/></div>
+		</div>
+	</div>
+	<div class="block" id="tabs-3">
+		<div class="block">Which external data source do you want to use?<br/>
+			<div id="dataSources"></div>
+		</div>
+		<div class="block">
+			Add new data source:<br/>
+			<input type="text" id="inputDataSourceName" placeholder="Name"/>
+			<input type="text" id="inputDataSourceURL" placeholder="URL"/><br/>
+			<input type="button" id="buttonSubmitDataSource" value="OK"/>
+		</div>
+	</div>
+	<div id="tabs-4">
+		<div class="block">Select reference links group<br/>
+			<div id="referenceLinkGroups"></div>
+			<div id="referenceLinks"></div>
+		</div>
+		<div class="block">Add reference link:<br/>
+			<input type="text" id="inputLocalReferenceLink"/>
+			<input type="text" id="inputRemoteReferenceLink"/>
+		</div>
+	</div>
+	<div id="tabs-5">Are these links correct?<br/>
+		<div id="reviewLinks">There are no results for the selected job yet...</div>
+		<input type="button" id="buttonPublishResult" style="display:none" value="Publish"/>
+	</div>
+</div>

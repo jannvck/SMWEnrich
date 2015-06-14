@@ -1,0 +1,55 @@
+SMW Enrich MediaWiki Extension
+==============================
+
+A MediaWiki extension for leveraging semantic Linked Open Data to enrich
+your data.
+Uses entity matching to identify entities in external data sources and
+provides an easy to extend architecture for supporting various entity matching
+frameworks and tools.
+
+
+Requirements
+============
+
+	* required PHP version for this extension is > 5.3.10
+	* min required Virtuoso version is > 6.1.3
+	* tested with MediaWiki version 1.21
+	* tested with Semantic MediaWiki version 1.8.0.5
+	* Java > 1.7.0 for 'erun' which needs to be installed seperately
+
+
+Installation Instructions
+============
+To install this extension you have to:
+
+	(1)	Copy the folder containing all file along this README
+		to the extensions folder of your MediaWiki installation.
+
+	(2)	Create all database tables required by this extension by
+		executing the 'install.sql' file in the 'sql' folder from an
+		SQL client interface or create the tables and indexes manually
+		according to this file.
+
+	(3)	Activate the extension by adding the following line to the
+		'LocalSettings.php' file of your MediaWiki installation:
+		
+		require_once "$IP/extensions/smwEnrich/SMWEnrich.php";
+		
+	(4)	Place the EAGLERunner all-in-one executable jar file which is
+		distributed in another package to a destination of your choice
+		and change the path pointing to that file in
+			includes/frameworks/limes/ERFrameworkLIMES.php
+		within the callBinary() function in line 159.
+		
+		Yep, you found a TODO!
+
+	(5)	Start using the extension.
+	
+
+Third party software and material license information
+============
+
+http://www.softicons.com/toolbar-icons/must-have-icons-by-visualpharm/delete-icon
+Icon set: 	Must Have Icons
+Author: 	VisualPharm
+License: 	CC Attribution-No Derivative Works 3.0 Unported
